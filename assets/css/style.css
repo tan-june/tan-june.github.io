@@ -271,19 +271,30 @@ nav.navbar.bootsnav .navbar-toggle i{color: #67B7D1;}
 /*.single-about-txt*/
 
 /*.single-about-img */
-.single-about-img{position: relative;box-shadow: 0 5px 20px rgba(14,25,80,.30);}
+.single-about-img {
+    position: relative;
+    box-shadow: 0 5px 20px rgb(255, 255, 255);
+}
+
 .single-about-img:before {
-    position:  absolute;
+    position: absolute;
     content: " ";
     top: 0;
-    left:  0;
+    left: 0;
     width: 109%;
-    height:  100%;
-    background: rgba(31,44,108,.3);
+    height: 100%;
+    /* background: rgb(255, 255, 255); */
 }
+
 .single-about-img img {
     max-width: 500px;
-    height: 468px;
+    height: 480px;
+    transition: transform 0.3s ease; /* Add transition for smooth zoom effect */
+}
+
+/* Add hover effect for zooming out */
+.single-about-img:hover img {
+    transform: scale(0.8);
 }
 .about-list-icon{
     display: flex;
